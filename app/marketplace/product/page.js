@@ -16,20 +16,6 @@ export default function Product(params) {
         <div className="col-span-6">
           <Tab.Group>
             <div className="flex items-start gap-4 w-full">
-              <Tab.List className="flex flex-col items-start justify-center gap-4">
-                {images.map((item, index) => (
-                  <Tab className="relative" key={index}>
-                    <Image
-                      src={item}
-                      width={5000}
-                      height={5000}
-                      alt=""
-                      className="w-40 h-32 object-cover object-center rounded-lg"
-                    />
-                    <div className="absolute w-full h-full inset-0 group-hover:bg-white/20 bg-gradient-to-b from-black/30 from-20% via-black/20 via-70% to-black/30 to-80% rounded-lg"></div>
-                  </Tab>
-                ))}
-              </Tab.List>
               <Tab.Panels className="w-full">
                 {images.map((item, index) => (
                   <Tab.Panel
@@ -46,6 +32,20 @@ export default function Product(params) {
                   </Tab.Panel>
                 ))}
               </Tab.Panels>
+              <Tab.List className="flex flex-col items-start justify-center gap-4">
+                {images.map((item, index) => (
+                  <Tab className="relative" key={index}>
+                    <Image
+                      src={item}
+                      width={5000}
+                      height={5000}
+                      alt=""
+                      className="w-40 h-32 object-cover object-center rounded-lg"
+                    />
+                    <div className="absolute w-full h-full inset-0 group-hover:bg-white/20 bg-gradient-to-b from-black/30 from-20% via-black/20 via-70% to-black/30 to-80% rounded-lg"></div>
+                  </Tab>
+                ))}
+              </Tab.List>
             </div>
           </Tab.Group>
         </div>
