@@ -1,6 +1,7 @@
 "use client";
 
-import { Tab } from "@headlessui/react";
+import { Tab, Disclosure } from "@headlessui/react";
+import { PlusIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 const images = [
@@ -12,7 +13,7 @@ const images = [
 export default function Product(params) {
   return (
     <>
-      <section className="grid grid-cols-12 gap-10 ps-24 p-8 overflow-y-auto h-screen">
+      <section className="my-16 grid grid-cols-12 gap-10 ps-28 p-12 overflow-y-auto h-screen">
         <div className="col-span-6">
           <Tab.Group>
             <div className="flex items-start gap-4 w-full">
@@ -65,10 +66,61 @@ export default function Product(params) {
               for all-day use.
             </p>
           </div>
-          <div>
+          <div className="pb-4">
             <button className="flex items-center justify-center rounded-md border border-transparent bg-emerald-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-emerald-700">
               Add to Bag
             </button>
+          </div>
+          <div className="divide-y divide-gray-300">
+            <div className="pb-4">
+              <Disclosure>
+                <Disclosure.Button className="flex items-center justify-between py-2 w-full">
+                  <h1>Features</h1>
+                  <PlusIcon className="w-6 h-6 stroke-1" />
+                </Disclosure.Button>
+                <Disclosure.Panel className="text-gray-600">
+                  <ul className="list-disc px-4">
+                    <li>Multiple strap configurations</li>
+                    <li>Spacious interior with top zip</li>
+                    <li>Leather handle and tabs</li>
+                    <li>Stainless strap loops</li>
+                    <li>Double stitched construction</li>
+                  </ul>
+                </Disclosure.Panel>
+              </Disclosure>
+            </div>
+            <div className="py-4">
+              <Disclosure>
+                <Disclosure.Button className="flex items-center justify-between py-2 w-full">
+                  <h1>Shipping</h1>
+                  <PlusIcon className="w-6 h-6 stroke-1" />
+                </Disclosure.Button>
+                <Disclosure.Panel className="text-gray-600">
+                  <ul className="list-disc px-4">
+                    <li>Free shipping on orders over $300</li>
+                    <li>International shipping available</li>
+                    <li>Expedited shipping options</li>
+                    <li>Signature required upon delivery</li>
+                  </ul>
+                </Disclosure.Panel>
+              </Disclosure>
+            </div>
+            <div className="py-4">
+              <Disclosure>
+                <Disclosure.Button className="flex items-center justify-between py-2 w-full">
+                  <h1>Returns</h1>
+                  <PlusIcon className="w-6 h-6 stroke-1" />
+                </Disclosure.Button>
+                <Disclosure.Panel className="text-gray-600">
+                  <ul className="list-disc px-4">
+                    <li>Easy return requests</li>
+                    <li>Pre-paid shipping label included</li>
+                    <li>10% restocking fee for returns</li>
+                    <li>60 day return window</li>
+                  </ul>
+                </Disclosure.Panel>
+              </Disclosure>
+            </div>
           </div>
         </div>
       </section>
