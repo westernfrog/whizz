@@ -4,5 +4,5 @@ export const metadata = {
 };
 
 export default function MarketplaceLayout({ children }) {
-  return <section className="overflow-auto w-screen">{children}</section>;
+  return <section className="w-screen">{children}</section>;
 }
