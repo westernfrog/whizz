@@ -53,7 +53,7 @@ export default function Product(params) {
         <div className="col-span-6 space-y-6 px-8">
           <div className="space-y-3">
             <h1 className="font-semibold text-4xl tracking-tight">
-              Basic T-shit
+              Basic T-shirt
             </h1>
             <p className="text-3xl">$140</p>
           </div>
