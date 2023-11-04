@@ -32,7 +32,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(true);
   return (
     <>
-      <header className="fixed top-0 left-0 z-50 hidden lg:block bg-gray-200 ring-1 ring-black/20 shadow-inner w-[70px] h-screen">
+      <header className="fixed top-0 left-0 z-50 hidden lg:block bg-[#f8f8f8] ring-1 ring-black/20 shadow-inner w-[70px] h-screen">
         <nav className="flex flex-col items-center justify-center gap-6 py-5 h-full">
           <Link
             href="/"

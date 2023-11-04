@@ -44,10 +44,10 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 h-[70px] z-30 w-screen ps-20 pe-3 border-b border-black/20 flex items-center bg-gray-200 text-gray-900">
+      <header className="sticky top-0 h-[70px] z-30 w-screen ps-20 pe-3 border-b border-black/20 flex items-center bg-[#f8f8f8] text-gray-900">
         <nav className="grid grid-cols-12 items-center justify-between px-4 w-full">
           <div className="col-span-4 rounded-xl flex items-center justify-start gap-3 w-full">
-            <h1 className="text-2xl font-medium tracking-tighter">
+            <h1 className="text-2xl font-semibold text-emerald-800 tracking-tighter">
               Marketplace
             </h1>
           </div>
