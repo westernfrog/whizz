@@ -55,7 +55,7 @@ export default function Header() {
           <div className="col-span-4 flex items-center justify-center gap-20">
             {navigation.map((item, index) => (
               <div key={index} className="">
-                <Link href={item.href} className="font-semibold tracking-tight">
+                <Link href={item.href} className="font-medium tracking-tight">
                   {item.name}
                 </Link>
               </div>

@@ -75,10 +75,10 @@ export default function Product(params) {
             <div className="pb-4">
               <Disclosure>
                 <Disclosure.Button className="flex items-center justify-between py-2 w-full">
-                  <h1>Features</h1>
+                  <h1 className="font-medium">Features</h1>
                   <PlusIcon className="w-6 h-6 stroke-1" />
                 </Disclosure.Button>
-                <Disclosure.Panel className="text-gray-600">
+                <Disclosure.Panel className="text-gray-700">
                   <ul className="list-disc px-4">
                     <li>Multiple strap configurations</li>
                     <li>Spacious interior with top zip</li>
@@ -92,10 +92,10 @@ export default function Product(params) {
             <div className="py-4">
               <Disclosure>
                 <Disclosure.Button className="flex items-center justify-between py-2 w-full">
-                  <h1>Shipping</h1>
+                  <h1 className="font-medium">Shipping</h1>
                   <PlusIcon className="w-6 h-6 stroke-1" />
                 </Disclosure.Button>
-                <Disclosure.Panel className="text-gray-600">
+                <Disclosure.Panel className="text-gray-700">
                   <ul className="list-disc px-4">
                     <li>Free shipping on orders over $300</li>
                     <li>International shipping available</li>
@@ -108,10 +108,10 @@ export default function Product(params) {
             <div className="py-4">
               <Disclosure>
                 <Disclosure.Button className="flex items-center justify-between py-2 w-full">
-                  <h1>Returns</h1>
+                  <h1 className="font-medium">Returns</h1>
                   <PlusIcon className="w-6 h-6 stroke-1" />
                 </Disclosure.Button>
-                <Disclosure.Panel className="text-gray-600">
+                <Disclosure.Panel className="text-gray-700">
                   <ul className="list-disc px-4">
                     <li>Easy return requests</li>
                     <li>Pre-paid shipping label included</li>
