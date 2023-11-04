@@ -25,7 +25,7 @@ export default function Overview(params) {
             </p>
           </div>
         </div>
-        <div className="ps-24 p-8 space-y-8">
+        <div className="ps-[7em] pe-12 py-8 space-y-8">
           <h1 className="text-2xl font-semibold tracking-tight">
             Today&apos;s Deals
           </h1>

@@ -9,7 +9,7 @@ export default function Card(params) {
         className="group relative col-span-3 h-96 ring-1 ring-gray-300 rounded-lg"
       >
         <Image
-          src="https://images.unsplash.com/photo-1588770238925-31c80ffccb9a?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1618354691321-e851c56960d1?auto=format&fit=crop&q=80&w=1915&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           width={5000}
           height={5000}
           alt=""

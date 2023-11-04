@@ -13,7 +13,7 @@ const images = [
 export default function Product(params) {
   return (
     <>
-      <section className="my-16 grid grid-cols-12 gap-10 ps-28 p-12 overflow-y-auto h-screen">
+      <section className="my-16 grid grid-cols-12 gap-10 ps-28 p-12 overflow-y-auto h-screen pb-52">
         <div className="col-span-6">
           <Tab.Group>
             <div className="flex items-start gap-4 w-full">

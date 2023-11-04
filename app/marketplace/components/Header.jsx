@@ -7,6 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import Link from "next/link";
 
 const navigation = [
   { name: "Today's Deals", href: "/" },
@@ -44,7 +45,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 h-[70px] z-30 w-screen ps-24 pe-12 border-b border-black/20 flex items-center bg-[#f8f8f8] text-gray-900">
+      <header className="fixed top-0 h-[70px] z-30 w-screen ps-24 px-12 border-b border-black/20 flex items-center bg-[#f8f8f8] text-gray-900">
         <nav className="grid grid-cols-12 items-center justify-between px-4 w-full">
           <div className="col-span-4 rounded-xl flex items-center justify-start gap-3 w-full">
             <h1 className="text-2xl font-semibold text-emerald-800 tracking-tighter">
@@ -54,7 +55,9 @@ export default function Header() {
           <div className="col-span-4 flex items-center justify-center gap-20">
             {navigation.map((item, index) => (
               <div key={index} className="">
-                <h1 className="font-semibold tracking-tight">{item.name}</h1>
+                <Link href={item.href} className="font-semibold tracking-tight">
+                  {item.name}
+                </Link>
               </div>
             ))}
           </div>
