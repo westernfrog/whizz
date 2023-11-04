@@ -9,8 +9,8 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
 const navigation = [
-  { name: "Book Rides", href: "/" },
-  { name: "Book Tours", href: "/" },
+  { name: "Today's Deals", href: "/" },
+  { name: "Flats and PGs", href: "/" },
 ];
 
 const products = [
@@ -44,29 +44,29 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 h-[70px] z-30 w-screen ps-20 pe-3 flex items-center backdrop-blur bg-black/20">
-        <nav className="grid grid-cols-12 items-center justify-between px-4 w-full text-gray-300">
+      <header className="sticky top-0 h-[70px] z-30 w-screen ps-20 pe-3 border-b border-black/20 flex items-center bg-gray-200 text-gray-900">
+        <nav className="grid grid-cols-12 items-center justify-between px-4 w-full">
           <div className="col-span-4 rounded-xl flex items-center justify-start gap-3 w-full">
-            <h1 className="text-2xl font-medium text-gray-300 tracking-tighter">
+            <h1 className="text-2xl font-medium tracking-tighter">
               Marketplace
             </h1>
           </div>
           <div className="col-span-4 flex items-center justify-center gap-20">
             {navigation.map((item, index) => (
               <div key={index} className="">
-                <h1 className="font-medium tracking-tight">{item.name}</h1>
+                <h1 className="font-semibold tracking-tight">{item.name}</h1>
               </div>
             ))}
           </div>
           <div className="col-span-4 flex items-center gap-2 ms-auto">
-            <button className="group w-10 h-10 mx-auto hover:bg-gray-50 hover:shadow transition duration-300 ease-in-out rounded-2xl flex items-center justify-center">
-              <MagnifyingGlassIcon className="w-6 h-6 stroke-gray-300 group-hover:stroke-gray-700" />
+            <button className="group w-10 h-10 mx-auto transition duration-300 ease-in-out rounded-2xl flex items-center justify-center">
+              <MagnifyingGlassIcon className="w-6 h-6 stroke-gray-800 group-hover:stroke-gray-700" />
             </button>
             <button
               onClick={() => setOpen(true)}
-              className="group w-10 h-10 mx-auto hover:bg-gray-50 hover:shadow transition duration-300 ease-in-out rounded-2xl flex items-center justify-center"
+              className="group w-10 h-10 mx-auto transition duration-300 ease-in-out rounded-2xl flex items-center justify-center"
             >
-              <ShoppingBagIcon className="w-6 h-6 stroke-gray-300 group-hover:stroke-gray-700" />
+              <ShoppingBagIcon className="w-6 h-6 stroke-gray-800 group-hover:stroke-gray-700" />
             </button>
           </div>
         </nav>
