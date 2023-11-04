@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main className="grid grid-cols-12 h-screen">{children}</main>
+        <main className="">{children}</main>
       </body>
     </html>
   );

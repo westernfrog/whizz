@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function TravelLayout({ children }) {
   return (
-    <section>
+    <section className="overflow-x-hidden">
       <Header />
       {children}
     </section>
