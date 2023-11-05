@@ -21,7 +21,7 @@ const navigation = [
   { name: "Community", icon: Squares2X2Icon, href: "/" },
   { name: "Explore", icon: GlobeAltIcon, href: "/" },
   { name: "Events", icon: CalendarDaysIcon, href: "/" },
-  { name: "Jobs", icon: BriefcaseIcon, href: "/" },
+  { name: "Jobs", icon: BriefcaseIcon, href: "/jobs" },
   { name: "Marketplace", icon: BuildingStorefrontIcon, href: "/marketplace" },
   { name: "Travel", icon: MapIcon, href: "/travel" },
   { name: "Profile", icon: UserCircleIcon, href: "/" },
