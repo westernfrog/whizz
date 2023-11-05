@@ -2,12 +2,15 @@
 
 import {
   MagnifyingGlassIcon,
+  PlusIcon,
   ShoppingBagIcon,
+  SquaresPlusIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navigation = [
   { name: "Today's Deals", href: "/" },
@@ -42,6 +45,9 @@ const products = [
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const cancelButtonRef = useRef(null);
 
   return (
     <>
@@ -62,14 +68,74 @@ export default function Header() {
             ))}
           </div>
           <div className="col-span-4 flex items-center gap-2 ms-auto">
+            <button
+              onClick={() => setIsOpen(true)}
+              className="group mx-auto transition duration-300 ease-in-out rounded-full ring-1 ring-gray-300 hover:ring-0 hover:bg-gray-200 hover:shadow-inner transition duration-300 ease-in-out text-emerald-800 px-3 py-2 font-semibold text-sm tracking-tight flex items-center justify-center mx-2 gap-2"
+            >
+              <SquaresPlusIcon className="w-6 h-6 stroke-emerald-800" />
+              Create Product
+            </button>
+            <Transition.Root show={isOpen} as={Fragment}>
+              <Dialog
+                as="div"
+                className="relative z-50"
+                initialFocus={cancelButtonRef}
+                onClose={setIsOpen}
+              >
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0"
+                  enterTo="opacity-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <div className="fixed inset-0 bg-black/60 transition-opacity" />
+                </Transition.Child>
+                <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                  <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                    <Transition.Child
+                      as={Fragment}
+                      enter="ease-out duration-300"
+                      enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                      enterTo="opacity-100 translate-y-0 sm:scale-100"
+                      leave="ease-in duration-200"
+                      leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                      leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    >
+                      <Dialog.Panel className="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-3xl h-[30em]">
+                        <div className="bg-[#f8f8f8]">
+                          <div className="relative">
+                            <Image
+                              src="https://images.unsplash.com/photo-1524323599945-b9b2e5a44e73?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                              width={5000}
+                              height={5000}
+                              alt="Banner"
+                              className="h-20 object-cover object-center"
+                            />
+                            <div className="absolute w-full h-full inset-0 bg-black/30"></div>
+                            <div className="absolute bottom-0 p-6 w-full text-center">
+                              <h1 className="text-2xl text-gray-100 font-semibold tracking-tight">
+                                Create your own product
+                              </h1>
+                            </div>
+                          </div>
+                        </div>
+                      </Dialog.Panel>
+                    </Transition.Child>
+                  </div>
+                </div>
+              </Dialog>
+            </Transition.Root>
             <button className="group w-10 h-10 mx-auto transition duration-300 ease-in-out rounded-2xl flex items-center justify-center">
-              <MagnifyingGlassIcon className="w-6 h-6 stroke-gray-800 group-hover:stroke-gray-700" />
+              <MagnifyingGlassIcon className="w-6 h-6 stroke-gray-800" />
             </button>
             <button
               onClick={() => setOpen(true)}
               className="group w-10 h-10 mx-auto transition duration-300 ease-in-out rounded-2xl flex items-center justify-center"
             >
-              <ShoppingBagIcon className="w-6 h-6 stroke-gray-800 group-hover:stroke-gray-700" />
+              <ShoppingBagIcon className="w-6 h-6 stroke-gray-800" />
             </button>
           </div>
         </nav>
