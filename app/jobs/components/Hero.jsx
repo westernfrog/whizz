@@ -4,7 +4,7 @@ export default function Hero(params) {
   return (
     <>
       <section className="flex items-center  gap-8 text-lime-950 ps-24 pe-8 my-8">
-        <div className="ml-40 me-auto mt-10">
+        <div className="ml-10 me-auto mt-10">
           <h2 className="max-w-lg mb-6 font-sans text-5xl font-bold tracking-tight text-gray-900    sm:leading-none">
             End Your Job Hunt
           </h2>
