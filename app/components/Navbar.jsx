@@ -45,7 +45,7 @@ export default function Navbar() {
               <Link
                 key={index}
                 href={item.href}
-                className="group relative w-11 h-11 mx-auto bg-gray-50 hover:bg-gray-200 ring-1 ring-gray-300 hover:ring-gray-500 shadow transition duration-300 ease-in-out rounded-xl flex items-center justify-center"
+                className="group relative w-11 h-11 mx-auto bg-gray-50 hover:bg-gray-200 ring-1 ring-gray-300 hover:ring-1 hover:shadow-inner transition duration-300 ease-in-out rounded-xl flex items-center justify-center"
               >
                 <item.icon className="w-6 h-6 stroke-gray-700" />
                 <div className="hidden group-hover:block absolute left-14 mb-12 bg-gray-200 backdrop-blur-xl ring-1 ring-gray-300 shadow-inner text-gray-700 px-2 py-1 rounded-lg">
@@ -59,7 +59,7 @@ export default function Navbar() {
               <Link
                 key={index}
                 href={item.href}
-                className="group relative w-11 h-11 bg-gray-50 hover:bg-gray-200 ring-1 ring-gray-300 hover:ring-gray-500 shadow transition duration-300 ease-in-out rounded-xl flex items-center justify-center"
+                className="group relative w-11 h-11 mx-auto bg-gray-50 hover:bg-gray-200 ring-1 ring-gray-300 hover:ring-1 hover:shadow-inner transition duration-300 ease-in-out rounded-xl flex items-center justify-center"
               >
                 <item.icon className="w-6 h-6 stroke-gray-700" />
                 <div className="hidden group-hover:block absolute left-14 mb-12 bg-gray-200 ring-1 ring-gray-300 shadow-inner text-gray-700 px-2 py-1 rounded-lg">
